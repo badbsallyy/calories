@@ -1,0 +1,80 @@
+---
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 text-center mb-20">
+    <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-zinc-900 mb-6">Decode what you eat</h2>
+    <p class="text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+      See your food in a whole new way. Uncover what goes into every bite, layer by layer.
+    </p>
+  </div>
+
+  <!-- The Burger Animation -->
+  <div class="burger-container relative h-[500px] flex flex-col items-center justify-center perspective-[1000px] group cursor-default">
+    
+    <!-- Bun Top -->
+    <div class="burger-layer relative z-50 mb-[-10px]" style="--hover-translate: -60px; --hover-rotate: -5deg;">
+      <div class="w-56 h-20 bg-[#F4A261] rounded-t-[5rem] border-2 border-[#E76F51] shadow-lg relative">
+        <!-- Seeds -->
+        <div class="absolute top-4 left-10 w-2 h-1 bg-[#FFE8D6] rounded-full opacity-60 rotate-12"></div>
+        <div class="absolute top-8 left-24 w-2 h-1 bg-[#FFE8D6] rounded-full opacity-60 -rotate-12"></div>
+        <div class="absolute top-5 right-12 w-2 h-1 bg-[#FFE8D6] rounded-full opacity-60 rotate-45"></div>
+      </div>
+      <!-- Label Left -->
+      <div class="absolute right-[110%] top-1/2 -translate-y-1/2 flex items-center justify-end ingredient-label">
+        <div class="bg-white px-4 py-2 rounded-xl shadow-lg border border-zinc-100 whitespace-nowrap">
+          <span class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider">Carbs</span>
+          <span class="block text-base font-bold text-zinc-900">22g Fiber</span>
+        </div>
+        <div class="h-px bg-zinc-300 ingredient-line"></div>
+      </div>
+    </div>
+
+    <!-- Lettuce -->
+    <div class="burger-layer relative z-40 mb-[-5px]" style="--hover-translate: -30px; --hover-rotate: 3deg;">
+      <div class="w-60 h-8 bg-[#80B918] rounded-full border border-[#55A630] shadow-md flex items-center justify-center">
+        <div class="w-full h-full rounded-full border-b-4 border-white/20"></div>
+      </div>
+    </div>
+
+    <!-- Tomato -->
+    <div class="burger-layer relative z-30 mb-[-5px]" style="--hover-translate: 0px; --hover-rotate: -2deg;">
+      <div class="w-52 h-4 bg-[#E63946] rounded-2xl border border-[#D00000] shadow-sm"></div>
+      <!-- Label Right -->
+       <div class="absolute left-[110%] top-1/2 -translate-y-1/2 flex items-center ingredient-label" style="transition-delay: 100ms;">
+        <div class="h-px bg-zinc-300 ingredient-line"></div>
+        <div class="bg-white px-4 py-2 rounded-xl shadow-lg border border-zinc-100 whitespace-nowrap">
+          <span class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider">Vitamins</span>
+          <span class="block text-base font-bold text-zinc-900">Vitamin A, C</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cheese -->
+    <div class="burger-layer relative z-20 mb-[-5px]" style="--hover-translate: 30px; --hover-rotate: 4deg;">
+      <div class="w-54 h-3 bg-[#FFD60A] rounded-md border border-[#FFC300] shadow-sm transform -rotate-2 w-[220px]"></div>
+    </div>
+
+    <!-- Meat -->
+    <div class="burger-layer relative z-10 mb-[-10px]" style="--hover-translate: 60px; --hover-rotate: -1deg;">
+      <div class="w-56 h-14 bg-[#582F0E] rounded-2xl border border-[#3E1F0B] shadow-lg flex flex-col justify-center px-4">
+         <div class="w-full h-1 bg-black/10 rounded-full mb-1"></div>
+         <div class="w-full h-1 bg-black/10 rounded-full"></div>
+      </div>
+      <!-- Label Left -->
+      <div class="absolute right-[110%] top-1/2 -translate-y-1/2 flex items-center justify-end ingredient-label" style="transition-delay: 200ms;">
+        <div class="bg-white px-4 py-2 rounded-xl shadow-lg border border-zinc-100 whitespace-nowrap">
+          <span class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider">Protein</span>
+          <span class="block text-base font-bold text-zinc-900">25g Beef</span>
+        </div>
+        <div class="h-px bg-zinc-300 ingredient-line"></div>
+      </div>
+    </div>
+
+    <!-- Bun Bottom -->
+    <div class="burger-layer relative z-0" style="--hover-translate: 90px; --hover-rotate: 0deg;">
+      <div class="w-56 h-12 bg-[#F4A261] rounded-b-3xl border-2 border-[#E76F51] shadow-lg mt-1"></div>
+    </div>
+
+  </div>
+</section>

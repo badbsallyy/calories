@@ -1,0 +1,39 @@
+---
+const faqItems = [
+  {
+    question: "How accurate is the scanner?",
+    answer: "Our AI scanner has a 98% accuracy rate for common foods and packaged goods. It learns from your corrections to get even better over time."
+  },
+  {
+    question: "Can I sync with Apple Health?",
+    answer: "Yes! We offer full two-way synchronization with Apple Health, Google Fit, and other major fitness platforms."
+  },
+  {
+    question: "Is there a free trial for Pro?",
+    answer: "Absolutely. You can try Pro features free for 7 days. We'll remind you before the trial ends so there are no surprises."
+  }
+];
+---
+
+<section class="py-24 bg-zinc-50">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl lg:text-4xl font-semibold tracking-tight text-zinc-900 mb-12 text-center">Frequently asked questions</h2>
+    
+    <div class="space-y-4">
+      {faqItems.map((item) => (
+        <details class="group bg-white rounded-3xl p-6 [&_summary::-webkit-details-marker]:hidden border border-zinc-200 shadow-sm">
+          <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-zinc-900 font-semibold select-none">
+            <span>{item.question}</span>
+            <span class="relative size-5 shrink-0">
+              <span class="iconify absolute inset-0 opacity-100 group-open:opacity-0 transition-opacity" data-icon="lucide:plus" data-width="20"></span>
+              <span class="iconify absolute inset-0 opacity-0 group-open:opacity-100 transition-opacity" data-icon="lucide:minus" data-width="20"></span>
+            </span>
+          </summary>
+          <p class="mt-4 leading-relaxed text-zinc-500">
+            {item.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
