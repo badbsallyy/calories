@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.float-slow { animation: float 8s ease-in-out infinite; }
+.float-medium { animation: float 6s ease-in-out infinite; }
+.float-fast { animation: float 4s ease-in-out infinite; }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.hero-title-highlight {
+    background-color: #FFF7ED; /* orange-50 */
+    border: 1px solid #FFEDD5; /* orange-100 */
+    color: #F97316; /* orange-500 */
+    border-radius: 0.75rem;
+    padding: 0 0.3em;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
+/* Burger Component CSS Styles */
+.burger-layer {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.burger-container:hover .burger-layer {
+    transform: translateY(var(--hover-translate, 0)) scale(var(--hover-scale, 1)) rotate(var(--hover-rotate, 0));
+}
+
+.ingredient-line {
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.burger-container:hover .ingredient-line {
+    width: 3rem;
+}
+
+.ingredient-label {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.5s ease;
+}
+
+.burger-container:hover .ingredient-label {
+    opacity: 1;
+    transform: translateX(0);
+}
